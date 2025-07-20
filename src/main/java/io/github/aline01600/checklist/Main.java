@@ -1,13 +1,26 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package io.github.aline01600.checklist;
 
-/**
- *
- * @author aline
- */
 public class Main {
-    
+    public static void main(String[] args) {
+        CheckList checklist = new CheckList();
+        Caretaker historico = new Caretaker();
+
+        checklist.adicionarTarefa("Lavar roupa");
+        checklist.adicionarTarefa("Limpar casa");
+        historico.salvarEstado(checklist.criarMemento());
+
+        checklist.adicionarTarefa("Estudar");
+        historico.salvarEstado(checklist.criarMemento());
+
+        checklist.adicionarTarefa("Fazer exercícios");
+        checklist.mostrarTarefas();
+
+        System.out.println("\n--- DESFAZER ---");
+        checklist.restaurarMemento(historico.desfazer());
+        checklist.mostrarTarefas();
+
+        System.out.println("\n--- DESFAZER ---");
+        checklist.restaurarMemento(historico.desfazer());
+        checklist.mostrarTarefas();
+    }
 }
