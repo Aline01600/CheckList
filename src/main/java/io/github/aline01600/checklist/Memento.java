@@ -1,13 +1,16 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package io.github.aline01600.checklist;
 
-/**
- *
- * @author aline
- */
+import java.util.List;
+
 public class Memento {
-    
+    private final List<Tarefa> estadoSalvo;
+
+    public Memento(List<Tarefa> estado) {
+        // Cria uma cópia do estado para garantir imutabilidade
+        this.estadoSalvo = List.copyOf(estado);
+    }
+
+    public List<Tarefa> getEstadoSalvo() {
+        return estadoSalvo;
+    }
 }
