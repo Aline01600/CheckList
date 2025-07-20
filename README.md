@@ -6,14 +6,18 @@ Este projeto Java implementa um sistema de CheckList com suporte a desfazer alte
 
 Checklist: Classe principal que armazenaa e manipula as tarefas.
 
-Tarefa: representa uma tarefa individual com uma descrição.
+Tarefa: Representa uma tarefa individual com uma descrição.
 
-Memento: encapsula o estado interno do CheckList.
+Memento: Encapsula o estado interno do CheckList.
 
-Caretaker: armazena o histórico de estados.
+Caretaker: Armazena o histórico de estados.
 
 ## Funcionalidades
 - Adicionar Tarefas
 - Visualizar Tarefas atuais
 - Salvar estado atual(Memento)
-- Desfazer alterações restalrando um estado anterior
+- Desfazer alterações restaurando um estado anterior
+
+## Diagrama de Classes
+<img width="696" height="338" alt="image" src="https://github.com/user-attachments/assets/eac8ada2-ca20-405f-a760-3bb2a6c8b92f" />
+
