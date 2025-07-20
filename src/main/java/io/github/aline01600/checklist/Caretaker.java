@@ -1,13 +1,18 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package io.github.aline01600.checklist;
 
-/**
- *
- * @author aline
- */
+import java.util.Stack;
+
 public class Caretaker {
-    
+    private Stack<Memento> historico = new Stack<>();
+
+    public void salvarEstado(Memento memento) {
+        historico.push(memento);
+    }
+
+    public Memento desfazer() {
+        if (!historico.isEmpty()) {
+            return historico.pop();
+        }
+        return null;
+    }
 }
